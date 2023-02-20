@@ -40,7 +40,7 @@ components:
       uri: deploy.yaml
       endpoints:
       - name: http-1-8080
-        targetPort: 8080
+        targetPort: 8081
         path: /
 commands:
   - id: build-image
