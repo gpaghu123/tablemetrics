@@ -43,7 +43,7 @@ components:
         targetPort: 8080
         path: /
 commands:
-  - id: build-image
+  - id: tablemetrics-image
     apply:
       component: image-build
   - id: deployk8s
