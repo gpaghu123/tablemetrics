@@ -39,7 +39,7 @@ components:
     kubernetes:
       uri: deploy.yaml
       endpoints:
-      - name: http-8080
+      - name: http-1-8080
         targetPort: 8080
         path: /
 commands:
