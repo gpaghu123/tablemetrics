@@ -1,19 +1,19 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: my-python
+  name: table-metrics
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: python-app
+      app: table-metrics-app
   template:
     metadata:
       labels:
-        app: python-app
+        app: table-metrics-app
     spec:
       containers:
-        - name: my-python
+        - name: table-metrics
           image: python-image:latest
           ports:
             - name: http
@@ -27,7 +27,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: my-python
+  name: table-metrics
 spec:
 ports:
   - name: http-8081
@@ -35,4 +35,4 @@ ports:
     protocol: TCP
     targetPort: 8080
 selector:
-  app: python-app
+  app: table-metrics-app
